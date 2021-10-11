@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+$primary-color: hsl(31, 77%, 52%);
+$secondary-color: hsl(184, 100%, 22%);
+$tertiary-color: hsl(179, 100%, 13%);
+$on-primary-color: hsl(0, 0%, 95%);
+$on-secondary-color: hsla(0, 0%, 100%, 0.75);
+
+body {
+  font-family: "Lexend Deca";
+  font-size: 15px;
+  min-height: 100vh;
+  height: 100%;
+}
+a {
+  text-decoration: none;
+}
+h1,
+p {
+  margin: 0;
+}
+.l-preview {
+  display: flex;
+  flex-direction: column;
+  background-color: $primary-color;
+  border-radius: 8px;
+}
+.l-card {
+  padding: 48px;
+  border-radius: 8px;
+  .header-card {
+    text-transform: uppercase;
+    font-family: "Big Shoulders Display";
+    font-size: 40px;
+    color: $on-primary-color;
+    margin: 35px 0 25px;
+  }
+  .paragraph-card {
+    line-height: 25px;
+    color: $on-secondary-color;
+    margin-bottom: 25px;
+  }
+}
+.orange-card {
+  background-color: $primary-color;
+}
+.green-card {
+  background-color: $secondary-color;
+}
+.dark-green-card {
+  background-color: $tertiary-color;
+}
+.last-child-card {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.l-button {
+  display: block;
+  width: 146px;
+  line-height: 25px;
+  padding: 12px 0;
+  text-align: center;
+  background-color: $on-secondary-color;
+  border-radius: 25px;
+  border: 2px solid transparent;
+  &:hover {
+    border-color: #ffffff;
+    background-color: transparent;
+    color: #ffffff;
+  }
+}
+
+.orange-btn {
+  color: $primary-color;
+}
+.green-btn {
+  color: $secondary-color;
+}
+.dark-green-btn {
+  color: $tertiary-color;
+}
+
+@media screen and (min-width: 1440px) {
+  .l-preview {
+    flex-direction: row;
+    margin: 260px 260px 0;
+  }
+  .l-card {
+    .paragraph-card {
+      margin-bottom: 83px;
+    }
+  }
+  .last-child-card {
+    border-radius: 8px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
